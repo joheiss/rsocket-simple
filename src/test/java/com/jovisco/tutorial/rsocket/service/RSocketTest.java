@@ -51,7 +51,6 @@ class RSocketTest {
                 .doOnNext(System.out::println)
                 .as(StepVerifier::create)
                 .assertNext(r -> assertEquals(25, r.output()))
-                // .expectNextCount(1L)
                 .expectComplete()
                 .verify();
     }
